@@ -48,6 +48,8 @@
         rel="stylesheet"
         href="news.css"
     >
+    <link rel="stylesheet" href="ai_answer.css">
+
 
 </head>
 
@@ -677,7 +679,72 @@
             class="results-container"
         ></section>
 
-    </main>
+    
+<section
+    id="aiAnswerBox"
+    class="ai-answer-box hidden"
+    aria-live="polite"
+>
+
+    <div class="ai-answer-header">
+
+        <div class="ai-answer-title-wrap">
+
+            <div class="ai-answer-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <div class="ai-answer-kicker">
+                    AI QUICK ANSWER
+                </div>
+
+                <h2>
+                    Answer
+                </h2>
+
+            </div>
+
+        </div>
+
+        <button
+            id="aiAnswerRefresh"
+            class="ai-answer-refresh"
+            type="button"
+            title="Refresh AI answer"
+            aria-label="Refresh AI answer"
+        >
+            ↻
+        </button>
+
+    </div>
+
+    <div
+        id="aiAnswerLoading"
+        class="ai-answer-loading hidden"
+    >
+        Thinking and checking the web...
+    </div>
+
+    <div
+        id="aiAnswerText"
+        class="ai-answer-text"
+    ></div>
+
+    <div
+        id="aiAnswerSources"
+        class="ai-answer-sources"
+    ></div>
+
+    <div class="ai-answer-note">
+        AI-generated overview based on web search results.
+    </div>
+
+</section>
+
+
+</main>
 
 
     <!-- =====================================================
@@ -757,6 +824,8 @@
     <script src="voice.js"></script>
 
     <script src="news.js"></script>
+    <script src="ai_answer.js"></script>
+
 
 </body>
 
