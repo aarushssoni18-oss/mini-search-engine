@@ -6,3 +6,5 @@ numpy
 scipy
 joblib
 gunicorn
+
+sympy>=1.14,<1.15

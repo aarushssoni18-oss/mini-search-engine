@@ -6,6 +6,9 @@ import requests
 
 from ai_identity import get_identity_response
 
+from math_engine import solve_math_query
+from freight_engine import solve_freight_query
+
 from flask import (
     Blueprint,
     jsonify,
@@ -188,6 +191,50 @@ def get_ai_answer():
         ""
     ).strip()
 
+
+    freight_answer = solve_freight_query(
+        query
+    )
+
+    if freight_answer:
+
+        return jsonify({
+
+            "status":
+                "ok",
+
+            "query":
+                query,
+
+            "answer":
+                freight_answer,
+
+            "sources":
+                []
+
+        })
+
+    math_answer = solve_math_query(
+        query
+    )
+
+    if math_answer:
+
+        return jsonify({
+
+            "status":
+                "ok",
+
+            "query":
+                query,
+
+            "answer":
+                math_answer,
+
+            "sources":
+                []
+
+        })
 
     identity_answer = get_identity_response(
         query
