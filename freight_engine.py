@@ -85,6 +85,28 @@ def currency_symbol(text):
     return ""
 
 
+
+def extract_current_question(query):
+
+    text = str(
+        query or ""
+    )
+
+    marker = "current user question:"
+
+    position = text.lower().rfind(
+        marker
+    )
+
+    if position >= 0:
+
+        return text[
+            position + len(marker):
+        ].strip()
+
+    return text.strip()
+
+
 # ============================================================
 # PACKAGE QUANTITY
 # ============================================================
@@ -1089,9 +1111,14 @@ def ocean_cost_answer(text):
 
 def solve_freight_query(query):
 
-    text = str(
-        query or ""
-    ).strip()
+    # IMPORTANT:
+    # The AI Chat sends previous conversation messages
+    # together with the current question.
+    #
+    # We must calculate only the CURRENT user question.
+    text = extract_current_question(
+        query
+    )
 
 
     if not text:
@@ -1134,8 +1161,7 @@ def solve_freight_query(query):
         return None
 
 
-    # Important:
-    # LCL must be checked BEFORE generic CBM.
+    # LCL must be evaluated before generic CBM.
     calculators = [
 
         air_chargeable_weight_answer,
