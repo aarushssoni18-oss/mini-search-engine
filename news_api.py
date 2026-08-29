@@ -1,10 +1,15 @@
 
 import os
-from urllib.parse import urlparse
 
 import requests
 
-from flask import Blueprint, jsonify, request
+from urllib.parse import urlparse
+
+from flask import (
+    Blueprint,
+    jsonify,
+    request
+)
 
 
 news_api = Blueprint(
@@ -44,9 +49,94 @@ CATEGORY_QUERIES = {
         "latest entertainment movies actors actresses music television streaming celebrities",
 
     "science":
-        "latest science space NASA research health science climate discoveries"
+        "latest science space NASA research climate discoveries"
 
 }
+
+
+# ============================================================
+# EXTRACT FIRST IMAGE
+# ============================================================
+
+def extract_image(
+    item
+):
+
+    images = item.get(
+        "images",
+        []
+    )
+
+
+    if not isinstance(
+        images,
+        list
+    ):
+        return {
+            "url": "",
+            "description": ""
+        }
+
+
+    for image in images:
+
+        # Tavily may return image objects
+        if isinstance(
+            image,
+            dict
+        ):
+
+            url = str(
+                image.get(
+                    "url",
+                    ""
+                )
+            ).strip()
+
+
+            description = str(
+                image.get(
+                    "description",
+                    ""
+                )
+            ).strip()
+
+
+            if url:
+
+                return {
+                    "url":
+                        url,
+
+                    "description":
+                        description
+                }
+
+
+        # Also support a plain image URL
+        elif isinstance(
+            image,
+            str
+        ):
+
+            url = image.strip()
+
+
+            if url:
+
+                return {
+                    "url":
+                        url,
+
+                    "description":
+                        ""
+                }
+
+
+    return {
+        "url": "",
+        "description": ""
+    }
 
 
 # ============================================================
@@ -95,7 +185,13 @@ def fetch_news(
                 False,
 
             "include_raw_content":
-                False
+                False,
+
+            "include_images":
+                True,
+
+            "include_image_descriptions":
+                True
 
         },
 
@@ -140,7 +236,9 @@ def fetch_news(
             continue
 
 
-        parsed = urlparse(url)
+        parsed = urlparse(
+            url
+        )
 
 
         source = (
@@ -151,6 +249,11 @@ def fetch_news(
             )
             if parsed.netloc
             else "web"
+        )
+
+
+        image = extract_image(
+            item
         )
 
 
@@ -184,7 +287,13 @@ def fetch_news(
                 item.get(
                     "score",
                     None
-                )
+                ),
+
+            "image":
+                image["url"],
+
+            "image_description":
+                image["description"]
 
         })
 

@@ -48,12 +48,105 @@ document.addEventListener(
                     "div"
                 );
 
+
             div.textContent =
                 value == null
                     ? ""
                     : String(value);
 
+
             return div.innerHTML;
+
+        }
+
+
+        // ====================================================
+        // FORMAT DATE
+        // ====================================================
+
+        function formatDate(
+            value
+        ) {
+
+            if (!value) {
+                return "";
+            }
+
+
+            const date =
+                new Date(
+                    value
+                );
+
+
+            if (
+                Number.isNaN(
+                    date.getTime()
+                )
+            ) {
+
+                return "";
+
+            }
+
+
+            return date.toLocaleDateString(
+                undefined,
+                {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric"
+                }
+            );
+
+        }
+
+
+        // ====================================================
+        // CATEGORY NAME
+        // ====================================================
+
+        function formatCategory(
+            category
+        ) {
+
+            const names = {
+
+                all:
+                    "All News",
+
+                india:
+                    "India",
+
+                politics:
+                    "Politics",
+
+                geopolitics:
+                    "Geopolitics",
+
+                business:
+                    "Business & Trade",
+
+                sports:
+                    "Sports",
+
+                technology:
+                    "Technology & AI",
+
+                entertainment:
+                    "Entertainment",
+
+                science:
+                    "Science & Space"
+
+            };
+
+
+            return (
+                names[category]
+                ||
+                "News"
+            );
 
         }
 
@@ -68,13 +161,13 @@ document.addEventListener(
 
             newsList.innerHTML = `
                 <div class="news-loading">
-                    Loading the latest news...
+                    Loading latest stories and images...
                 </div>
             `;
 
 
             newsStatus.textContent =
-                "Fetching latest stories...";
+                "Fetching the latest stories...";
 
 
             try {
@@ -172,8 +265,7 @@ document.addEventListener(
 
                 newsList.innerHTML = `
                     <div class="news-error">
-                        No recent stories were found
-                        for this category.
+                        No recent stories were found.
                     </div>
                 `;
 
@@ -189,6 +281,7 @@ document.addEventListener(
                         document.createElement(
                             "article"
                         );
+
 
                     card.className =
                         "news-card";
@@ -218,13 +311,103 @@ document.addEventListener(
                         "web";
 
 
+                    const image =
+                        item.image
+                        ||
+                        "";
+
+
+                    const imageDescription =
+                        item.image_description
+                        ||
+                        title;
+
+
                     const published =
                         formatDate(
                             item.published
                         );
 
 
-                    card.innerHTML = `
+                    // ------------------------------------------------
+                    // IMAGE
+                    // ------------------------------------------------
+
+                    if (image) {
+
+                        const imageWrapper =
+                            document.createElement(
+                                "div"
+                            );
+
+
+                        imageWrapper.className =
+                            "news-image-wrap";
+
+
+                        const img =
+                            document.createElement(
+                                "img"
+                            );
+
+
+                        img.className =
+                            "news-image";
+
+
+                        img.src =
+                            image;
+
+
+                        img.alt =
+                            imageDescription;
+
+
+                        img.loading =
+                            "lazy";
+
+
+                        img.decoding =
+                            "async";
+
+
+                        img.addEventListener(
+                            "error",
+                            function() {
+
+                                imageWrapper.remove();
+
+                            }
+                        );
+
+
+                        imageWrapper.appendChild(
+                            img
+                        );
+
+
+                        card.appendChild(
+                            imageWrapper
+                        );
+
+                    }
+
+
+                    // ------------------------------------------------
+                    // CONTENT
+                    // ------------------------------------------------
+
+                    const content =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    content.className =
+                        "news-card-content";
+
+
+                    content.innerHTML = `
 
                         <div class="news-meta">
 
@@ -281,107 +464,16 @@ document.addEventListener(
                     `;
 
 
+                    card.appendChild(
+                        content
+                    );
+
+
                     newsList.appendChild(
                         card
                     );
 
                 }
-            );
-
-        }
-
-
-        // ====================================================
-        // DATE
-        // ====================================================
-
-        function formatDate(
-            value
-        ) {
-
-            if (!value) {
-                return "";
-            }
-
-
-            const date =
-                new Date(
-                    value
-                );
-
-
-            if (
-                Number.isNaN(
-                    date.getTime()
-                )
-            ) {
-
-                return "";
-
-            }
-
-
-            return date.toLocaleDateString(
-                undefined,
-                {
-                    month:
-                        "short",
-
-                    day:
-                        "numeric",
-
-                    year:
-                        "numeric"
-                }
-            );
-
-        }
-
-
-        // ====================================================
-        // CATEGORY NAME
-        // ====================================================
-
-        function formatCategory(
-            category
-        ) {
-
-            const names = {
-
-                all:
-                    "All News",
-
-                india:
-                    "India",
-
-                politics:
-                    "Politics",
-
-                geopolitics:
-                    "Geopolitics",
-
-                business:
-                    "Business & Trade",
-
-                sports:
-                    "Sports",
-
-                technology:
-                    "Technology & AI",
-
-                entertainment:
-                    "Entertainment",
-
-                science:
-                    "Science & Space"
-
-            };
-
-
-            return (
-                names[category]
-                ||
-                "News"
             );
 
         }
@@ -434,7 +526,7 @@ document.addEventListener(
 
 
         // ====================================================
-        // REFRESH BUTTON
+        // REFRESH
         // ====================================================
 
         if (newsRefresh) {
@@ -470,7 +562,7 @@ document.addEventListener(
 
 
         // ====================================================
-        // INITIAL NEWS LOAD
+        // INITIAL NEWS
         // ====================================================
 
         loadNews(
