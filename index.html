@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#F3F5F7"
+    >
+
+    <meta
+        name="description"
+        content="Mini Search Engine - bright, modern hybrid web search."
+    >
+
+    <title>Mini Search Engine</title>
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/mini-search-icon-3.png"
+    >
+
+
+    <!-- =====================================================
+         STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         DECORATIVE BACKGROUND
+         ===================================================== -->
+
+    <div class="bg-orb bg-orb-cyan"></div>
+    <div class="bg-orb bg-orb-blue"></div>
+    <div class="bg-orb bg-orb-pink"></div>
+
+
+    <!-- =====================================================
+         BROWSER TOOLBAR
+         ===================================================== -->
+
+    <header class="browser-bar">
+
+        <div class="browser-controls">
+
+            <button
+                id="backButton"
+                class="browser-control"
+                type="button"
+                title="Back"
+            >
+                ←
+            </button>
+
+
+            <button
+                id="forwardButton"
+                class="browser-control"
+                type="button"
+                title="Forward"
+            >
+                →
+            </button>
+
+
+            <button
+                id="refreshButton"
+                class="browser-control"
+                type="button"
+                title="Refresh"
+            >
+                ↻
+            </button>
+
+
+            <button
+                id="homeButton"
+                class="browser-control"
+                type="button"
+                title="Home"
+            >
+                ⌂
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             ADDRESS / SEARCH BAR
+             ================================================= -->
+
+        <div class="omnibox-wrapper">
+
+            <div class="omnibox">
+
+                <span class="omnibox-icon">
+                    🔍
+                </span>
+
+
+                <input
+                    id="addressInput"
+                    class="omnibox-input"
+                    type="text"
+                    placeholder="Search or enter a website"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+
+
+                <button
+                    id="addressClearButton"
+                    class="address-clear-button"
+                    type="button"
+                    title="Clear"
+                >
+                    ×
+                </button>
+
+
+                <button
+                    id="goButton"
+                    class="go-button"
+                    type="button"
+                >
+                    Go
+                </button>
+
+            </div>
+
+
+            <div
+                id="addressDropdown"
+                class="suggestion-dropdown hidden"
+            ></div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN APP
+         ===================================================== -->
+
+    <main class="app">
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="hero">
+
+
+            <!-- Brand -->
+            <div class="brand-area">
+
+                <div class="brand-logo">
+
+                    <span class="brand-m">
+                        M
+                    </span>
+
+                    <span class="brand-s">
+                        S
+                    </span>
+
+                </div>
+
+
+                <div class="brand-copy">
+
+                    <div class="brand-kicker">
+                        MINI SEARCH
+                    </div>
+
+                    <h1>
+                        Search smarter.
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="rainbow-line"></div>
+
+
+            <p class="hero-description">
+
+                Search companies, websites, technology,
+                science and the wider web — all in one place.
+
+            </p>
+
+
+            <!-- =================================================
+                 MAIN SEARCH
+                 ================================================= -->
+
+            <div class="search-section">
+
+                <div class="main-search-wrapper">
+
+                    <div class="main-search-box">
+
+                        <span class="main-search-icon">
+                            🔎
+                        </span>
+
+
+                        <input
+                            id="searchInput"
+                            class="main-search-input"
+                            type="text"
+                            placeholder="What are you looking for?"
+                            autocomplete="off"
+                            spellcheck="false"
+                        >
+
+
+                        <button
+                            id="clearSearchButton"
+                            class="clear-search-button"
+                            type="button"
+                            title="Clear search"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        id="searchButton"
+                        class="main-search-button"
+                        type="button"
+                    >
+
+                        <span>
+                            Search
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        id="searchDropdown"
+                        class="search-dropdown hidden"
+                    ></div>
+
+                </div>
+
+
+                <!-- =================================================
+                     QUICK SEARCHES
+                     ================================================= -->
+
+                <div class="quick-searches">
+
+                    <span class="quick-label">
+                        TRENDING
+                    </span>
+
+
+                    <button
+                        class="quick-chip chip-cyan"
+                        data-query="Maersk"
+                        type="button"
+                    >
+                        Maersk
+                    </button>
+
+
+                    <button
+                        class="quick-chip chip-blue"
+                        data-query="Tesla"
+                        type="button"
+                    >
+                        Tesla
+                    </button>
+
+
+                    <button
+                        class="quick-chip chip-violet"
+                        data-query="NVIDIA"
+                        type="button"
+                    >
+                        NVIDIA
+                    </button>
+
+
+                    <button
+                        class="quick-chip chip-pink"
+                        data-query="OpenAI"
+                        type="button"
+                    >
+                        OpenAI
+                    </button>
+
+
+                    <button
+                        class="quick-chip chip-mint"
+                        data-query="NASA"
+                        type="button"
+                    >
+                        NASA
+                    </button>
+
+
+                    <button
+                        class="quick-chip chip-sky"
+                        data-query="Tata Motors"
+                        type="button"
+                    >
+                        Tata Motors
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             QUICK ACCESS
+             ================================================= -->
+
+        <section class="quick-access">
+
+            <div class="quick-access-heading">
+
+                <div class="quick-access-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <div class="quick-access-kicker">
+                        QUICK ACCESS
+                    </div>
+
+                    <h2>
+                        Useful websites
+                    </h2>
+
+                    <p>
+                        Open your frequently used websites directly.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- KU RISE ERP -->
+
+            <a
+                class="shortcut-card ku-rise-card"
+                href="https://kurise.karnavatiuniversity.edu.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="shortcut-icon">
+                    🎓
+                </div>
+
+
+                <div class="shortcut-content">
+
+                    <h3>
+                        KU RISE ERP
+                    </h3>
+
+                    <p>
+                        Karnavati University student portal
+                    </p>
+
+                </div>
+
+
+                <div class="shortcut-arrow">
+                    →
+                </div>
+
+            </a>
+
+        </section>
+
+
+        <!-- =================================================
+             STATUS + HISTORY
+             ================================================= -->
+
+        <section class="search-status-bar">
+
+            <div
+                id="message"
+                class="message"
+            >
+                <span class="status-dot"></span>
+                Ready to search.
+            </div>
+
+
+            <button
+                id="historyButton"
+                class="history-button"
+                type="button"
+            >
+                🕘 History
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             HISTORY PANEL
+             ================================================= -->
+
+        <section
+            id="historyPanel"
+            class="history-panel hidden"
+        >
+
+            <div class="history-header">
+
+                <div>
+
+                    <div class="section-kicker">
+                        SEARCH HISTORY
+                    </div>
+
+                    <h2>
+                        Recent searches
+                    </h2>
+
+                    <p>
+                        Saved privately on this device
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="clearHistoryButton"
+                    class="clear-history-button"
+                    type="button"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div
+                id="historyList"
+                class="history-list"
+            ></div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESULTS
+             ================================================= -->
+
+        <section
+            id="results"
+            class="results-container"
+        ></section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
+    <nav class="mobile-nav">
+
+        <button
+            id="mobileHomeButton"
+            type="button"
+        >
+            <span>⌂</span>
+            <small>Home</small>
+        </button>
+
+
+        <button
+            id="mobileSearchButton"
+            type="button"
+        >
+            <span>🔎</span>
+            <small>Search</small>
+        </button>
+
+
+        <button
+            id="mobileHistoryButton"
+            type="button"
+        >
+            <span>🕘</span>
+            <small>History</small>
+        </button>
+
+
+        <button
+            id="mobileRefreshButton"
+            type="button"
+        >
+            <span>↻</span>
+            <small>Refresh</small>
+        </button>
+
+    </nav>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <strong>
+            MINI SEARCH
+        </strong>
+
+        <span>•</span>
+
+        <span>
+            TF-IDF
+        </span>
+
+        <span>•</span>
+
+        <span>
+            LIVE WEB
+        </span>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
