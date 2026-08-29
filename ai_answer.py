@@ -4,6 +4,8 @@ from urllib.parse import urlparse
 
 import requests
 
+from ai_identity import get_identity_response
+
 from flask import (
     Blueprint,
     jsonify,
@@ -185,6 +187,29 @@ def get_ai_answer():
         "q",
         ""
     ).strip()
+
+
+    identity_answer = get_identity_response(
+        query
+    )
+
+    if identity_answer:
+
+        return jsonify({
+
+            "status":
+                "ok",
+
+            "query":
+                query,
+
+            "answer":
+                identity_answer,
+
+            "sources":
+                []
+
+        })
 
 
     if not query:

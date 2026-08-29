@@ -1,0 +1,213 @@
+
+/* ============================================================
+   MINI SEARCH AI CHAT — MICROPHONE
+   ============================================================ */
+
+.ai-chat-mic {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        0;
+
+    border:
+        1px solid #B9EFFF;
+
+    border-radius:
+        11px;
+
+    background:
+        #F5FBFE;
+
+    color:
+        #2563FF;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 5px 13px
+        rgba(0, 217, 255, 0.08);
+
+    transition:
+        transform 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.ai-chat-mic:hover {
+
+    transform:
+        translateY(-2px);
+
+    color:
+        #FFFFFF;
+
+    border-color:
+        #00D9FF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00D9FF,
+            #2563FF
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 217, 255, 0.20);
+}
+
+
+.ai-chat-mic:active {
+
+    transform:
+        scale(0.95);
+}
+
+
+.ai-chat-mic:focus-visible {
+
+    outline:
+        3px solid
+        rgba(0, 217, 255, 0.18);
+
+    outline-offset:
+        2px;
+}
+
+
+.ai-chat-mic-icon {
+
+    width:
+        20px;
+
+    height:
+        20px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        1.9;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+.ai-chat-mic-listening {
+
+    color:
+        #FFFFFF;
+
+    border-color:
+        #00D9FF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00D9FF,
+            #2563FF
+        );
+
+    box-shadow:
+
+        0 0 0 5px
+        rgba(0, 217, 255, 0.09),
+
+        0 0 27px
+        rgba(0, 217, 255, 0.30);
+
+    animation:
+        miniSearchChatMicPulse
+        1.15s
+        ease-in-out
+        infinite;
+}
+
+
+.ai-chat-mic-listening::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    pointer-events:
+        none;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    .ai-chat-mic {
+
+        width:
+            38px;
+
+        height:
+            40px;
+
+        border-radius:
+            10px;
+    }
+
+
+    .ai-chat-mic-icon {
+
+        width:
+            19px;
+
+        height:
+            19px;
+    }
+
+}
+
+
+@keyframes miniSearchChatMicPulse {
+
+    0%, 100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.06);
+    }
+
+}

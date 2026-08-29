@@ -50,6 +50,7 @@
     >
     <link rel="stylesheet" href="ai_answer.css">
     <link rel="stylesheet" href="ai_chat.css">
+    <link rel="stylesheet" href="ai_chat_voice.css">
 
 
 </head>
@@ -935,7 +936,40 @@
         ></textarea>
 
 
-        <button
+        
+<button
+    id="aiChatMicButton"
+    class="ai-chat-mic"
+    type="button"
+    title="Speak to Mini Search AI"
+    aria-label="Speak to Mini Search AI"
+>
+    <svg
+        class="ai-chat-mic-icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+    >
+        <path
+            d="M12 14.5a3.5 3.5 0 0 0 3.5-3.5V7a3.5 3.5 0 0 0-7 0v4a3.5 3.5 0 0 0 3.5 3.5Z"
+        ></path>
+
+        <path
+            d="M18 10.5v.5a6 6 0 0 1-12 0v-.5"
+        ></path>
+
+        <path
+            d="M12 17v4"
+        ></path>
+
+        <path
+            d="M9 21h6"
+        ></path>
+    </svg>
+</button>
+
+
+<button
             id="aiChatSendButton"
             class="ai-chat-send"
             type="button"
@@ -981,6 +1015,7 @@
     <script src="news.js"></script>
     <script src="ai_answer.js"></script>
     <script src="ai_chat.js"></script>
+    <script src="ai_chat_voice.js"></script>
 
 
 </body>
