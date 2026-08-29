@@ -49,6 +49,7 @@
         href="news.css"
     >
     <link rel="stylesheet" href="ai_answer.css">
+    <link rel="stylesheet" href="ai_chat.css">
 
 
 </head>
@@ -795,7 +796,161 @@
          FOOTER
          ===================================================== -->
 
-    <footer class="footer">
+    
+<!-- =========================================================
+     MINI SEARCH AI CHAT
+     ========================================================= -->
+
+<button
+    id="aiChatOpenButton"
+    class="ai-chat-open-button"
+    type="button"
+    aria-label="Open Mini Search AI"
+>
+    <span class="ai-chat-open-icon">
+        ✦
+    </span>
+
+    <span>
+        AI Chat
+    </span>
+</button>
+
+
+<section
+    id="aiChatPanel"
+    class="ai-chat-panel"
+    aria-hidden="true"
+>
+
+    <!-- HEADER -->
+
+    <div class="ai-chat-header">
+
+        <div class="ai-chat-brand">
+
+            <div class="ai-chat-brand-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <div class="ai-chat-kicker">
+                    MINI SEARCH
+                </div>
+
+                <div class="ai-chat-title">
+                    AI Assistant
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="ai-chat-actions">
+
+            <button
+                id="aiChatClearButton"
+                class="ai-chat-action"
+                type="button"
+                title="Clear conversation"
+                aria-label="Clear conversation"
+            >
+                ↻
+            </button>
+
+
+            <button
+                id="aiChatCloseButton"
+                class="ai-chat-action"
+                type="button"
+                title="Close AI Chat"
+                aria-label="Close AI Chat"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MESSAGES -->
+
+    <div
+        id="aiChatMessages"
+        class="ai-chat-messages"
+    >
+
+        <div class="ai-chat-welcome">
+
+            <div class="ai-chat-welcome-icon">
+                ✦
+            </div>
+
+            <h3>
+                Hi, I'm Mini Search AI
+            </h3>
+
+            <p>
+                Ask me anything, then ask
+                follow-up questions naturally.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- TYPING -->
+
+    <div
+        id="aiChatTyping"
+        class="ai-chat-typing hidden"
+    >
+        Thinking
+
+        <span class="ai-chat-dots">
+
+            <span class="ai-chat-dot"></span>
+            <span class="ai-chat-dot"></span>
+            <span class="ai-chat-dot"></span>
+
+        </span>
+
+    </div>
+
+
+    <!-- INPUT -->
+
+    <div class="ai-chat-input-area">
+
+        <textarea
+            id="aiChatInput"
+            class="ai-chat-input"
+            placeholder="Ask a question..."
+            rows="1"
+            autocomplete="off"
+        ></textarea>
+
+
+        <button
+            id="aiChatSendButton"
+            class="ai-chat-send"
+            type="button"
+            title="Send"
+            aria-label="Send message"
+        >
+            →
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
 
         <strong>
             MINI SEARCH
@@ -825,6 +980,7 @@
 
     <script src="news.js"></script>
     <script src="ai_answer.js"></script>
+    <script src="ai_chat.js"></script>
 
 
 </body>
