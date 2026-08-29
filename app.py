@@ -5,6 +5,7 @@ import joblib
 
 from flask import Flask, jsonify, request, send_from_directory
 from sklearn.metrics.pairwise import cosine_similarity
+from news_api import news_api
 
 
 # ============================================================
@@ -24,6 +25,9 @@ app = Flask(
     __name__,
     static_folder=None
 )
+
+
+app.register_blueprint(news_api)
 
 
 # ============================================================
