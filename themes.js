@@ -38,7 +38,7 @@
             localStorage.getItem(
                 THEME_KEY
             )
-            || "classic-blue"
+            || "dark-slate"
         );
 
     }

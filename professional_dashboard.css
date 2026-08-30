@@ -1,0 +1,1962 @@
+
+/* ============================================================
+   MINI SEARCH — PROFESSIONAL DASHBOARD V2
+   ============================================================ */
+
+:root {
+    --ms-bg: #07111F;
+    --ms-surface: #0D1A2B;
+    --ms-surface-2: #112238;
+    --ms-surface-3: #162A43;
+
+    --ms-primary: #2F80FF;
+    --ms-primary-hover: #1F6FE5;
+    --ms-neon: #28A8FF;
+
+    --ms-text: #F5F8FC;
+    --ms-text-2: #C7D3E1;
+    --ms-muted: #8FA2B8;
+
+    --ms-border: #1F344D;
+    --ms-border-soft: #172A40;
+
+    --ms-success: #35D07F;
+    --ms-danger: #FF5C6C;
+
+    --ms-radius: 14px;
+}
+
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+html,
+body {
+    min-height: 100%;
+    background: var(--ms-bg) !important;
+    color: var(--ms-text) !important;
+}
+
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif !important;
+}
+
+
+/* ============================================================
+   REMOVE OLD DECORATIVE ORBS
+   ============================================================ */
+
+.bg-orb,
+.bg-orb-cyan,
+.bg-orb-blue,
+.bg-orb-pink {
+    display: none !important;
+}
+
+
+/* ============================================================
+   OLD ADDRESS BAR
+   KEEP IT FOR JS COMPATIBILITY
+   ============================================================ */
+
+.omnibox-wrapper {
+    display: none !important;
+}
+
+
+/* ============================================================
+   TOP TOOLBAR
+   ============================================================ */
+
+.browser-bar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 5000 !important;
+
+    min-height: 64px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 0 22px !important;
+
+    background: rgba(7, 17, 31, 0.96) !important;
+
+    border-bottom:
+        1px solid
+        var(--ms-border) !important;
+
+    box-shadow:
+        0 8px 28px
+        rgba(0, 0, 0, 0.18) !important;
+
+    backdrop-filter: blur(14px) !important;
+}
+
+
+.browser-controls {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+}
+
+
+.browser-control {
+    width: 36px !important;
+    height: 36px !important;
+
+    border:
+        1px solid
+        transparent !important;
+
+    border-radius: 9px !important;
+
+    background: transparent !important;
+
+    color:
+        var(--ms-muted) !important;
+
+    box-shadow: none !important;
+
+    font-size: 17px !important;
+}
+
+
+.browser-control:hover {
+    color: var(--ms-text) !important;
+    background: var(--ms-surface-2) !important;
+    border-color: var(--ms-border) !important;
+    transform: none !important;
+}
+
+
+/* ============================================================
+   TOOLBAR BRAND
+   ============================================================ */
+
+.theme-toolbar-area {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.toolbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-right: 7px;
+}
+
+
+.toolbar-brand-mark {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2F80FF,
+            #1F5FD0
+        );
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+.toolbar-brand-name {
+    color: var(--ms-text);
+    font-size: 13px;
+    font-weight: 650;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.app {
+    width: min(1260px, calc(100% - 48px)) !important;
+    margin: 0 auto !important;
+    padding-bottom: 100px !important;
+}
+
+
+.hero {
+    padding: 66px 0 28px !important;
+}
+
+
+.brand-area {
+    gap: 14px !important;
+}
+
+
+.brand-logo {
+    width: 60px !important;
+    height: 60px !important;
+
+    border-radius: 13px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1B4F9C,
+            #2F80FF
+        ) !important;
+
+    box-shadow:
+        0 12px 30px
+        rgba(47, 128, 255, 0.18) !important;
+
+    transform: none !important;
+}
+
+
+.brand-logo::before {
+    display: none !important;
+}
+
+
+.brand-copy h1 {
+    margin: 0 !important;
+
+    color: var(--ms-text) !important;
+
+    -webkit-text-fill-color:
+        var(--ms-text) !important;
+
+    font-size:
+        clamp(42px, 5vw, 60px) !important;
+
+    line-height: 1.04 !important;
+
+    font-weight: 760 !important;
+
+    letter-spacing: -2px !important;
+}
+
+
+.brand-kicker {
+    color: var(--ms-neon) !important;
+    letter-spacing: 2px !important;
+}
+
+
+.hero-description {
+    max-width: 700px !important;
+    margin: 12px auto 0 !important;
+
+    color: var(--ms-muted) !important;
+
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+}
+
+
+.rainbow-line {
+    display: none !important;
+}
+
+
+/* ============================================================
+   MAIN SEARCH
+   ============================================================ */
+
+.search-section {
+    width: min(860px, 100%) !important;
+    margin: 34px auto 0 !important;
+}
+
+
+.main-search-wrapper {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+
+.main-search-box {
+    height: 58px !important;
+
+    border:
+        1px solid
+        var(--ms-border) !important;
+
+    border-radius: 13px !important;
+
+    background:
+        var(--ms-surface) !important;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.16) !important;
+}
+
+
+.main-search-box:focus-within {
+    border-color:
+        var(--ms-primary) !important;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(47, 128, 255, 0.12) !important;
+}
+
+
+.main-search-input {
+    color:
+        var(--ms-text) !important;
+
+    font-size: 15px !important;
+}
+
+
+.main-search-input::placeholder {
+    color:
+        var(--ms-muted) !important;
+}
+
+
+.main-search-button {
+    width: 124px !important;
+    height: 58px !important;
+
+    border-radius: 12px !important;
+
+    background:
+        var(--ms-primary) !important;
+
+    box-shadow:
+        none !important;
+
+    animation:
+        none !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+
+.main-search-button:hover {
+    background:
+        var(--ms-primary-hover) !important;
+
+    transform:
+        translateY(-1px) !important;
+
+    filter: none !important;
+}
+
+
+/* ============================================================
+   VOICE
+   ============================================================ */
+
+.voice-search-button {
+    width: 37px !important;
+    height: 37px !important;
+
+    border:
+        1px solid
+        var(--ms-border) !important;
+
+    border-radius: 9px !important;
+
+    background:
+        var(--ms-surface-2) !important;
+
+    color:
+        var(--ms-muted) !important;
+
+    box-shadow: none !important;
+}
+
+
+.voice-search-button:hover {
+    color:
+        var(--ms-primary) !important;
+
+    border-color:
+        var(--ms-primary) !important;
+
+    background:
+        var(--ms-surface-3) !important;
+}
+
+
+.voice-search-button.voice-listening {
+    background:
+        var(--ms-danger) !important;
+
+    border-color:
+        var(--ms-danger) !important;
+
+    color:
+        white !important;
+}
+
+
+/* ============================================================
+   TRENDING
+   ============================================================ */
+
+.quick-searches {
+    justify-content: flex-start !important;
+    margin-top: 13px !important;
+}
+
+
+.quick-label {
+    color: var(--ms-muted) !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.2px !important;
+}
+
+
+.quick-chip,
+.quick-chip[class*="chip-"] {
+    padding: 7px 11px !important;
+
+    border:
+        1px solid
+        var(--ms-border) !important;
+
+    border-radius: 8px !important;
+
+    background:
+        var(--ms-surface) !important;
+
+    color:
+        var(--ms-text-2) !important;
+
+    box-shadow: none !important;
+}
+
+
+.quick-chip:hover {
+    background:
+        var(--ms-surface-2) !important;
+
+    border-color:
+        var(--ms-primary) !important;
+
+    color:
+        var(--ms-primary) !important;
+
+    transform: none !important;
+}
+
+
+/* ============================================================
+   DASHBOARD GRID
+   ============================================================ */
+
+.quick-access,
+.news-hub {
+    border:
+        1px solid
+        var(--ms-border) !important;
+
+    border-radius:
+        var(--ms-radius) !important;
+
+    background:
+        var(--ms-surface) !important;
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 0, 0, 0.13) !important;
+}
+
+
+.quick-access {
+    margin-top: 24px !important;
+}
+
+
+.news-hub {
+    margin-top: 24px !important;
+}
+
+
+.quick-access-icon,
+.news-icon,
+.ai-answer-icon {
+    background:
+        var(--ms-accent, #102A4D) !important;
+
+    color:
+        var(--ms-primary) !important;
+}
+
+
+/* ============================================================
+   SEARCH STATUS
+   ============================================================ */
+
+.search-status-bar {
+    margin-top: 22px !important;
+}
+
+
+.message {
+    color:
+        var(--ms-muted) !important;
+}
+
+
+.status-dot {
+    background:
+        var(--ms-success) !important;
+
+    box-shadow: none !important;
+}
+
+
+/* ============================================================
+   HISTORY
+   ============================================================ */
+
+.history-panel {
+    background:
+        var(--ms-surface) !important;
+
+    border:
+        1px solid
+        var(--ms-border) !important;
+
+    border-radius:
+        var(--ms-radius) !important;
+}
+
+
+.history-item {
+    background:
+        var(--ms-surface-2) !important;
+
+    color:
+        var(--ms-text-2) !important;
+
+    border:
+        1px solid
+        var(--ms-border-soft) !important;
+}
+
+
+.history-item:hover {
+    background:
+        var(--ms-surface-3) !important;
+
+    color:
+        var(--ms-primary) !important;
+}
+
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
+
+.results-container {
+    width: min(940px, 100%) !important;
+}
+
+
+.result {
+    padding:
+        20px 2px !important;
+
+    margin-bottom:
+        0 !important;
+
+    border:
+        none !important;
+
+    border-top:
+        1px solid
+        var(--ms-border-soft) !important;
+
+    border-radius:
+        0 !important;
+
+    background:
+        transparent !important;
+
+    box-shadow:
+        none !important;
+}
+
+
+.result::before {
+    display: none !important;
+}
+
+
+.result:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+
+.result-title {
+    color:
+        #62A4FF !important;
+
+    font-size:
+        18px !important;
+
+    font-weight:
+        650 !important;
+}
+
+
+.result-url {
+    color:
+        #57C797 !important;
+}
+
+
+.result-snippet {
+    color:
+        var(--ms-text-2) !important;
+
+    font-size:
+        13px !important;
+
+    line-height:
+        1.7 !important;
+}
+
+
+/* ============================================================
+   AI ANSWER
+   ============================================================ */
+
+.ai-answer-box {
+    background:
+        var(--ms-surface) !important;
+
+    border:
+        1px solid
+        var(--ms-border) !important;
+
+    border-radius:
+        var(--ms-radius) !important;
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 0, 0, 0.13) !important;
+}
+
+
+.ai-answer-kicker {
+    color:
+        var(--ms-primary) !important;
+}
+
+
+.ai-answer-text {
+    color:
+        var(--ms-text-2) !important;
+
+    font-size:
+        13px !important;
+
+    line-height:
+        1.75 !important;
+}
+
+
+/* ============================================================
+   AI CHAT
+   ============================================================ */
+
+.ai-chat-open-button {
+    right: 24px !important;
+    bottom: 24px !important;
+
+    background:
+        var(--ms-primary) !important;
+
+    border:
+        1px solid
+        var(--ms-primary) !important;
+
+    border-radius:
+        11px !important;
+
+    box-shadow:
+        0 8px 24px
+        rgba(47, 128, 255, 0.28) !important;
+}
+
+
+.ai-chat-open-button:hover {
+    background:
+        var(--ms-primary-hover) !important;
+
+    transform:
+        translateY(-2px) !important;
+}
+
+
+.ai-chat-panel {
+    width:
+        min(430px, calc(100vw - 26px)) !important;
+
+    height:
+        min(680px, calc(100vh - 90px)) !important;
+
+    background:
+        var(--ms-surface) !important;
+
+    border:
+        1px solid
+        var(--ms-border) !important;
+
+    border-radius:
+        15px !important;
+
+    box-shadow:
+        0 22px 60px
+        rgba(0, 0, 0, 0.35) !important;
+}
+
+
+.ai-chat-messages {
+    background:
+        var(--ms-bg) !important;
+}
+
+
+.ai-chat-bubble {
+    background:
+        var(--ms-surface-2) !important;
+
+    color:
+        var(--ms-text-2) !important;
+
+    border:
+        1px solid
+        var(--ms-border) !important;
+}
+
+
+.ai-chat-user .ai-chat-bubble {
+    background:
+        #123A6B !important;
+
+    color:
+        #DCEEFF !important;
+
+    border-color:
+        #245D9C !important;
+}
+
+
+/* ============================================================
+   FEATURE DRAWER
+   ============================================================ */
+
+.ms-feature-rail {
+
+    position:
+        fixed;
+
+    left: 0;
+    top: 64px;
+    bottom: 0;
+
+    width: 238px;
+
+    padding:
+        22px 14px;
+
+    background:
+        rgba(7,17,31,0.97);
+
+    border-right:
+        1px solid
+        var(--ms-border);
+
+    overflow-y:
+        auto;
+
+    z-index:
+        2500;
+
+}
+
+
+.ms-feature-heading {
+
+    padding:
+        8px 12px;
+
+    color:
+        var(--ms-muted);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.4px;
+
+}
+
+
+.ms-feature-item {
+
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        9px 11px;
+
+    margin-bottom: 3px;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius: 9px;
+
+    background:
+        transparent;
+
+    color:
+        var(--ms-text-2);
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+
+    font-size:
+        12px;
+
+}
+
+
+.ms-feature-item:hover {
+
+    background:
+        var(--ms-surface-2);
+
+    color:
+        var(--ms-text);
+
+}
+
+
+.ms-feature-item.active {
+
+    background:
+        #102A4D;
+
+    border-color:
+        #1B4D82;
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.ms-feature-icon {
+
+    width:
+        24px;
+
+    height:
+        24px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--ms-primary);
+
+    font-size:
+        15px;
+
+}
+
+
+.ms-feature-label {
+
+    flex:
+        1;
+
+}
+
+
+.ms-feature-badge {
+
+    padding:
+        2px 5px;
+
+    border:
+        1px solid
+        rgba(255,193,7,0.35);
+
+    border-radius:
+        5px;
+
+    color:
+        #F4C542;
+
+    font-size:
+        7px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ============================================================
+   NEW FEATURE PANEL
+   ============================================================ */
+
+.ms-feature-modal-overlay {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        18px;
+
+    background:
+        rgba(2,8,16,0.58);
+
+    backdrop-filter:
+        blur(7px);
+
+    z-index:
+        9000;
+
+}
+
+
+.ms-feature-modal {
+
+    width:
+        min(760px, 100%);
+
+    max-height:
+        min(720px, 90vh);
+
+    overflow:
+        auto;
+
+    padding:
+        24px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        16px;
+
+    background:
+        var(--ms-surface);
+
+    box-shadow:
+        0 24px 80px
+        rgba(0,0,0,0.36);
+
+}
+
+
+.ms-feature-modal-header {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.ms-feature-modal-title {
+
+    color:
+        var(--ms-text);
+
+    font-size:
+        20px;
+
+    font-weight:
+        750;
+
+}
+
+
+.ms-feature-modal-subtitle {
+
+    margin-top:
+        5px;
+
+    color:
+        var(--ms-muted);
+
+    font-size:
+        11px;
+
+}
+
+
+.ms-feature-close {
+
+    width:
+        32px;
+
+    height:
+        32px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        8px;
+
+    background:
+        var(--ms-surface-2);
+
+    color:
+        var(--ms-muted);
+
+    cursor:
+        pointer;
+
+    font-size:
+        17px;
+
+}
+
+
+/* ============================================================
+   FEATURE GRID
+   ============================================================ */
+
+.ms-tool-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        10px;
+
+}
+
+
+.ms-tool-card {
+
+    min-height:
+        110px;
+
+    padding:
+        14px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        11px;
+
+    background:
+        var(--ms-surface-2);
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+
+    transition:
+        border-color .15s ease,
+        transform .15s ease;
+
+}
+
+
+.ms-tool-card:hover {
+
+    border-color:
+        var(--ms-primary);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.ms-tool-icon {
+
+    font-size:
+        20px;
+
+    color:
+        var(--ms-primary);
+
+}
+
+
+.ms-tool-name {
+
+    margin-top:
+        9px;
+
+    color:
+        var(--ms-text);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+.ms-tool-description {
+
+    margin-top:
+        4px;
+
+    color:
+        var(--ms-muted);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.45;
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .ms-feature-rail {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 620px) {
+
+    .app {
+        width:
+            min(100% - 24px, 720px) !important;
+    }
+
+
+    .hero {
+        padding:
+            42px 0 24px !important;
+    }
+
+
+    .main-search-wrapper {
+        flex-direction:
+            column;
+    }
+
+
+    .main-search-button {
+        width:
+            100% !important;
+    }
+
+
+    .ms-tool-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .theme-panel {
+        position:
+            fixed !important;
+
+        top:
+            72px !important;
+
+        right:
+            10px !important;
+
+        left:
+            10px !important;
+
+        width:
+            auto !important;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .ms-tool-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* ============================================================
+   BOOKMARKS
+   ============================================================ */
+
+.ms-bookmark-item {
+
+    display:
+        flex;
+
+    gap:
+        12px;
+
+    padding:
+        12px;
+
+    margin-bottom:
+        8px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        10px;
+
+    background:
+        var(--ms-surface-2);
+
+}
+
+
+.ms-bookmark-main {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+}
+
+
+.ms-bookmark-title {
+
+    color:
+        #62A4FF;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+
+}
+
+
+.ms-bookmark-url {
+
+    margin-top:
+        3px;
+
+    color:
+        #57C797;
+
+    font-size:
+        9px;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.ms-bookmark-snippet {
+
+    margin-top:
+        6px;
+
+    color:
+        var(--ms-muted);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.45;
+
+}
+
+
+.ms-bookmark-remove {
+
+    width:
+        28px;
+
+    height:
+        28px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        7px;
+
+    background:
+        var(--ms-surface);
+
+    color:
+        var(--ms-muted);
+
+    cursor:
+        pointer;
+
+}
+
+
+.ms-bookmark-remove:hover {
+
+    color:
+        var(--ms-danger);
+
+}
+
+
+/* ============================================================
+   EMPTY
+   ============================================================ */
+
+.ms-empty-state {
+
+    padding:
+        40px 20px;
+
+    text-align:
+        center;
+
+}
+
+
+.ms-empty-icon {
+
+    font-size:
+        30px;
+
+}
+
+
+.ms-empty-title {
+
+    margin-top:
+        9px;
+
+    color:
+        var(--ms-text);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+}
+
+
+.ms-empty-text {
+
+    margin-top:
+        5px;
+
+    color:
+        var(--ms-muted);
+
+    font-size:
+        10px;
+
+}
+
+
+/* ============================================================
+   CALC HISTORY
+   ============================================================ */
+
+.ms-calc-history-item {
+
+    margin-bottom:
+        9px;
+
+    padding:
+        12px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        10px;
+
+    background:
+        var(--ms-surface-2);
+
+}
+
+
+.ms-calc-question {
+
+    color:
+        var(--ms-text);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+}
+
+
+.ms-calc-answer {
+
+    margin:
+        8px 0 0;
+
+    white-space:
+        pre-wrap;
+
+    color:
+        var(--ms-text-2);
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.55;
+
+}
+
+
+/* ============================================================
+   CONVERTER
+   ============================================================ */
+
+.ms-converter {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        10px;
+
+}
+
+
+.ms-converter select,
+.ms-converter input {
+
+    width:
+        100%;
+
+    min-height:
+        42px;
+
+    padding:
+        0 10px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        9px;
+
+    background:
+        var(--ms-surface-2);
+
+    color:
+        var(--ms-text);
+
+    outline:
+        none;
+
+}
+
+
+.ms-primary-button {
+
+    min-height:
+        42px;
+
+    padding:
+        0 14px;
+
+    border:
+        none;
+
+    border-radius:
+        9px;
+
+    background:
+        var(--ms-primary);
+
+    color:
+        white;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+}
+
+
+.ms-primary-button:hover {
+
+    background:
+        var(--ms-primary-hover);
+
+}
+
+
+.ms-convert-result {
+
+    grid-column:
+        1 / -1;
+
+    min-height:
+        56px;
+
+    padding:
+        12px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        9px;
+
+    background:
+        var(--ms-bg);
+
+    color:
+        var(--ms-text);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ============================================================
+   PRIVATE SEARCH
+   ============================================================ */
+
+.ms-private-card {
+
+    padding:
+        20px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        11px;
+
+    background:
+        var(--ms-surface-2);
+
+}
+
+
+.ms-private-state {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.ms-private-state span {
+
+    display:
+        inline-block;
+
+    padding:
+        5px 9px;
+
+    border-radius:
+        7px;
+
+    background:
+        var(--ms-surface-3);
+
+    color:
+        var(--ms-muted);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+}
+
+
+.ms-private-state span.active {
+
+    background:
+        #0A3D2B;
+
+    color:
+        var(--ms-success);
+
+}
+
+
+.ms-private-card p {
+
+    margin-bottom:
+        15px;
+
+    color:
+        var(--ms-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* ============================================================
+   LANGUAGE / SEARCH MODES / COMMANDS
+   ============================================================ */
+
+.ms-language-grid,
+.ms-mode-grid,
+.ms-command-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        9px;
+
+}
+
+
+.ms-language-button,
+.ms-mode-button,
+.ms-command-button {
+
+    min-height:
+        46px;
+
+    padding:
+        10px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        9px;
+
+    background:
+        var(--ms-surface-2);
+
+    color:
+        var(--ms-text-2);
+
+    cursor:
+        pointer;
+
+    font-size:
+        11px;
+
+    font-weight:
+        650;
+
+}
+
+
+.ms-language-button:hover,
+.ms-mode-button:hover,
+.ms-command-button:hover {
+
+    border-color:
+        var(--ms-primary);
+
+}
+
+
+.ms-language-button.active,
+.ms-mode-button.active {
+
+    background:
+        #102A4D;
+
+    border-color:
+        var(--ms-primary);
+
+    color:
+        #FFFFFF;
+
+}
+
+
+/* ============================================================
+   READY / UPLOAD
+   ============================================================ */
+
+.ms-ready-card,
+.ms-upload-zone {
+
+    padding:
+        22px;
+
+    border:
+        1px dashed
+        var(--ms-border);
+
+    border-radius:
+        11px;
+
+    background:
+        var(--ms-surface-2);
+
+}
+
+
+.ms-ready-title {
+
+    color:
+        var(--ms-text);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+}
+
+
+.ms-ready-card p,
+.ms-upload-note {
+
+    margin-top:
+        7px;
+
+    color:
+        var(--ms-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+
+}
+
+
+.ms-upload-zone input {
+
+    max-width:
+        100%;
+
+    color:
+        var(--ms-text-2);
+
+}
+
+
+/* ============================================================
+   RESULT BOOKMARK BUTTON
+   ============================================================ */
+
+.result {
+
+    position:
+        relative;
+
+}
+
+
+.ms-result-bookmark {
+
+    position:
+        absolute;
+
+    top:
+        18px;
+
+    right:
+        0;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    border:
+        1px solid
+        var(--ms-border);
+
+    border-radius:
+        7px;
+
+    background:
+        var(--ms-surface);
+
+    color:
+        var(--ms-muted);
+
+    cursor:
+        pointer;
+
+}
+
+
+.ms-result-bookmark:hover {
+
+    border-color:
+        var(--ms-primary);
+
+    color:
+        var(--ms-primary);
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 620px) {
+
+    .ms-converter {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .ms-language-grid,
+    .ms-mode-grid,
+    .ms-command-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
