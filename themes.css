@@ -1,0 +1,902 @@
+
+/* ============================================================
+   MINI SEARCH — PROFESSIONAL THEME SYSTEM
+   ============================================================ */
+
+
+/* ============================================================
+   1. CLASSIC BLUE
+   ============================================================ */
+
+:root,
+[data-theme="classic-blue"] {
+    --theme-primary: #1A73E8;
+    --theme-primary-hover: #1769D1;
+    --theme-accent-soft: #E8F0FE;
+    --theme-accent-soft-2: #F8FBFF;
+    --theme-page: #F8F9FA;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #F1F3F4;
+    --theme-text: #202124;
+    --theme-text-2: #3C4043;
+    --theme-muted: #5F6368;
+    --theme-border: #DADCE0;
+    --theme-border-soft: #E8EAED;
+    --theme-user: #E8F0FE;
+    --theme-user-text: #174EA6;
+    --theme-danger: #D93025;
+    --theme-success: #188038;
+}
+
+
+/* ============================================================
+   2. SKY BLUE
+   ============================================================ */
+
+[data-theme="sky-blue"] {
+    --theme-primary: #2196F3;
+    --theme-primary-hover: #1976D2;
+    --theme-accent-soft: #E3F2FD;
+    --theme-accent-soft-2: #F5FAFE;
+    --theme-page: #F7FBFF;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #EEF7FD;
+    --theme-text: #172033;
+    --theme-text-2: #37465A;
+    --theme-muted: #67778A;
+    --theme-border: #D6E7F5;
+    --theme-border-soft: #E7F0F7;
+    --theme-user: #E3F2FD;
+    --theme-user-text: #155A91;
+    --theme-danger: #D32F2F;
+    --theme-success: #2E7D32;
+}
+
+
+/* ============================================================
+   3. BLACK & NEON BLUE
+   ============================================================ */
+
+[data-theme="black-neon"] {
+    --theme-primary: #00A8FF;
+    --theme-primary-hover: #18C8FF;
+    --theme-accent-soft: #0B2435;
+    --theme-accent-soft-2: #071923;
+    --theme-page: #05070A;
+    --theme-surface: #0B1017;
+    --theme-surface-2: #111923;
+    --theme-text: #F5F7FA;
+    --theme-text-2: #D3DCE6;
+    --theme-muted: #8FA0B1;
+    --theme-border: #1B2A3A;
+    --theme-border-soft: #142230;
+    --theme-user: #0B2435;
+    --theme-user-text: #8FDBFF;
+    --theme-danger: #FF5F56;
+    --theme-success: #36D399;
+}
+
+
+/* ============================================================
+   4. FOREST GREEN
+   ============================================================ */
+
+[data-theme="forest-green"] {
+    --theme-primary: #16824A;
+    --theme-primary-hover: #106B3C;
+    --theme-accent-soft: #E6F4EA;
+    --theme-accent-soft-2: #F4FBF6;
+    --theme-page: #F7FAF8;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #EEF6F1;
+    --theme-text: #17231B;
+    --theme-text-2: #304137;
+    --theme-muted: #617068;
+    --theme-border: #D7E3DB;
+    --theme-border-soft: #E7EFE9;
+    --theme-user: #E6F4EA;
+    --theme-user-text: #155D35;
+    --theme-danger: #C62828;
+    --theme-success: #16824A;
+}
+
+
+/* ============================================================
+   5. ROYAL PURPLE
+   ============================================================ */
+
+[data-theme="royal-purple"] {
+    --theme-primary: #6D3FD9;
+    --theme-primary-hover: #5A31BB;
+    --theme-accent-soft: #EEE8FF;
+    --theme-accent-soft-2: #FAF8FF;
+    --theme-page: #FAF9FC;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #F2EFF9;
+    --theme-text: #24202D;
+    --theme-text-2: #494052;
+    --theme-muted: #6D6478;
+    --theme-border: #DED7EA;
+    --theme-border-soft: #ECE7F1;
+    --theme-user: #EEE8FF;
+    --theme-user-text: #4C2D98;
+    --theme-danger: #C62828;
+    --theme-success: #2E7D32;
+}
+
+
+/* ============================================================
+   6. SUNSET ORANGE
+   ============================================================ */
+
+[data-theme="sunset-orange"] {
+    --theme-primary: #F57C00;
+    --theme-primary-hover: #D96900;
+    --theme-accent-soft: #FFF0E0;
+    --theme-accent-soft-2: #FFF9F2;
+    --theme-page: #FCFAF7;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #F6F1EB;
+    --theme-text: #2B251F;
+    --theme-text-2: #4D4339;
+    --theme-muted: #74685D;
+    --theme-border: #E5D9CC;
+    --theme-border-soft: #F0E8DF;
+    --theme-user: #FFF0E0;
+    --theme-user-text: #8A4600;
+    --theme-danger: #C62828;
+    --theme-success: #2E7D32;
+}
+
+
+/* ============================================================
+   7. ADOBE RED
+   ============================================================ */
+
+[data-theme="adobe-red"] {
+    --theme-primary: #D62F2F;
+    --theme-primary-hover: #B92424;
+    --theme-accent-soft: #FCE8E8;
+    --theme-accent-soft-2: #FFF8F8;
+    --theme-page: #FAFAFA;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #F3F3F3;
+    --theme-text: #202020;
+    --theme-text-2: #424242;
+    --theme-muted: #686868;
+    --theme-border: #DCDCDC;
+    --theme-border-soft: #EBEBEB;
+    --theme-user: #FCE8E8;
+    --theme-user-text: #7A1F1F;
+    --theme-danger: #B3261E;
+    --theme-success: #188038;
+}
+
+
+/* ============================================================
+   8. DARK SLATE
+   ============================================================ */
+
+[data-theme="dark-slate"] {
+    --theme-primary: #3B82F6;
+    --theme-primary-hover: #2563EB;
+    --theme-accent-soft: #172B4D;
+    --theme-accent-soft-2: #13233C;
+    --theme-page: #0F1115;
+    --theme-surface: #171A21;
+    --theme-surface-2: #20242C;
+    --theme-text: #F5F7FA;
+    --theme-text-2: #D7DCE3;
+    --theme-muted: #9AA3AF;
+    --theme-border: #343A46;
+    --theme-border-soft: #2A303A;
+    --theme-user: #172B4D;
+    --theme-user-text: #BFDBFE;
+    --theme-danger: #F87171;
+    --theme-success: #4ADE80;
+}
+
+
+/* ============================================================
+   9. OCEAN TEAL
+   ============================================================ */
+
+[data-theme="ocean-teal"] {
+    --theme-primary: #00897B;
+    --theme-primary-hover: #00796B;
+    --theme-accent-soft: #E0F2F1;
+    --theme-accent-soft-2: #F2FBFA;
+    --theme-page: #F6FAFA;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #EDF5F4;
+    --theme-text: #172524;
+    --theme-text-2: #35514F;
+    --theme-muted: #647D7A;
+    --theme-border: #D3E3E1;
+    --theme-border-soft: #E4EEED;
+    --theme-user: #E0F2F1;
+    --theme-user-text: #00695C;
+    --theme-danger: #C62828;
+    --theme-success: #00796B;
+}
+
+
+/* ============================================================
+   10. GRAPHITE GOLD
+   ============================================================ */
+
+[data-theme="graphite-gold"] {
+    --theme-primary: #B8891A;
+    --theme-primary-hover: #987314;
+    --theme-accent-soft: #F8F1DC;
+    --theme-accent-soft-2: #FCFAF3;
+    --theme-page: #F7F7F5;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #EFEFED;
+    --theme-text: #202120;
+    --theme-text-2: #3F403E;
+    --theme-muted: #70716D;
+    --theme-border: #D9D8D2;
+    --theme-border-soft: #E9E8E2;
+    --theme-user: #F8F1DC;
+    --theme-user-text: #775A0F;
+    --theme-danger: #B3261E;
+    --theme-success: #4B7F52;
+}
+
+
+/* ============================================================
+   11. BURGUNDY ROSE
+   ============================================================ */
+
+[data-theme="burgundy-rose"] {
+    --theme-primary: #8E2C4A;
+    --theme-primary-hover: #76213B;
+    --theme-accent-soft: #F7E7EC;
+    --theme-accent-soft-2: #FEF8FA;
+    --theme-page: #FBF8F9;
+    --theme-surface: #FFFFFF;
+    --theme-surface-2: #F5EEF1;
+    --theme-text: #2B2024;
+    --theme-text-2: #4B3940;
+    --theme-muted: #756269;
+    --theme-border: #E3D5DA;
+    --theme-border-soft: #F0E7EA;
+    --theme-user: #F7E7EC;
+    --theme-user-text: #662035;
+    --theme-danger: #B3261E;
+    --theme-success: #397A4C;
+}
+
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+html,
+body {
+    background: var(--theme-page) !important;
+    color: var(--theme-text) !important;
+}
+
+
+/* ============================================================
+   KEEP THE EXISTING ADDRESS BAR IN THE DOM
+   BUT HIDE IT VISUALLY.
+   This preserves script.js compatibility.
+   ============================================================ */
+
+.omnibox-wrapper {
+    display: none !important;
+}
+
+
+/* ============================================================
+   PROFESSIONAL TOP TOOLBAR
+   ============================================================ */
+
+.browser-bar {
+    min-height: 56px !important;
+    padding: 8px 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: var(--theme-surface) !important;
+    border-bottom: 1px solid var(--theme-border-soft) !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 5000 !important;
+}
+
+
+/* Navigation buttons remain */
+.browser-controls {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+}
+
+
+.browser-control {
+    width: 34px !important;
+    height: 34px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    background: transparent !important;
+    color: var(--theme-muted) !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+
+.browser-control:hover {
+    background: var(--theme-surface-2) !important;
+    color: var(--theme-text) !important;
+    transform: none !important;
+}
+
+
+/* ============================================================
+   THEME TOOLBAR AREA
+   ============================================================ */
+
+.theme-toolbar-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+
+/* ============================================================
+   BRAND IN TOP BAR
+   ============================================================ */
+
+.toolbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-right: 8px;
+    color: var(--theme-text);
+}
+
+
+.toolbar-brand-mark {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: var(--theme-primary);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.toolbar-brand-name {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   MAIN BRAND
+   ============================================================ */
+
+.brand-logo {
+    background: var(--theme-primary) !important;
+}
+
+
+.brand-copy h1 {
+    color: var(--theme-primary) !important;
+    -webkit-text-fill-color: var(--theme-primary) !important;
+}
+
+
+.brand-kicker,
+.hero-description {
+    color: var(--theme-muted) !important;
+}
+
+
+.rainbow-line {
+    display: none !important;
+}
+
+
+/* ============================================================
+   SEARCH
+   ============================================================ */
+
+.main-search-box {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border) !important;
+}
+
+
+.main-search-box:focus-within {
+    border-color: var(--theme-primary) !important;
+}
+
+
+.main-search-input {
+    color: var(--theme-text) !important;
+}
+
+
+.main-search-input::placeholder {
+    color: var(--theme-muted) !important;
+}
+
+
+.main-search-icon {
+    color: var(--theme-muted) !important;
+}
+
+
+.main-search-button {
+    background: var(--theme-primary) !important;
+}
+
+
+.main-search-button:hover {
+    background: var(--theme-primary-hover) !important;
+}
+
+
+/* ============================================================
+   VOICE
+   ============================================================ */
+
+.voice-search-button {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-muted) !important;
+}
+
+
+.voice-search-button:hover {
+    color: var(--theme-primary) !important;
+    border-color: var(--theme-primary) !important;
+    background: var(--theme-accent-soft-2) !important;
+}
+
+
+.voice-search-button.voice-listening {
+    background: var(--theme-danger) !important;
+    border-color: var(--theme-danger) !important;
+    color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   CHIPS
+   ============================================================ */
+
+.quick-chip {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-text-2) !important;
+}
+
+
+.quick-chip:hover {
+    background: var(--theme-accent-soft-2) !important;
+    border-color: var(--theme-primary) !important;
+    color: var(--theme-primary) !important;
+}
+
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.quick-access,
+.news-hub,
+.history-panel,
+.ai-answer-box,
+.news-card,
+.shortcut-card {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border-soft) !important;
+}
+
+
+/* ============================================================
+   NEWS
+   ============================================================ */
+
+.news-icon {
+    background: var(--theme-accent-soft) !important;
+    color: var(--theme-primary) !important;
+}
+
+
+.news-heading h2,
+.news-card h3 {
+    color: var(--theme-text) !important;
+}
+
+
+.news-subtitle,
+.news-card p {
+    color: var(--theme-muted) !important;
+}
+
+
+.news-read,
+.news-source {
+    color: var(--theme-primary) !important;
+}
+
+
+.news-category {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-muted) !important;
+}
+
+
+.news-category.active {
+    background: var(--theme-primary) !important;
+    border-color: var(--theme-primary) !important;
+    color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
+
+.result {
+    border-color: var(--theme-border-soft) !important;
+}
+
+
+.result-title {
+    color: var(--theme-primary) !important;
+}
+
+
+.result-url {
+    color: var(--theme-muted) !important;
+}
+
+
+.result-snippet {
+    color: var(--theme-text-2) !important;
+}
+
+
+/* ============================================================
+   AI
+   ============================================================ */
+
+.ai-answer-kicker {
+    color: var(--theme-primary) !important;
+}
+
+
+.ai-answer-text {
+    color: var(--theme-text-2) !important;
+}
+
+
+.ai-source {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-primary) !important;
+}
+
+
+.ai-chat-panel {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border) !important;
+}
+
+
+.ai-chat-header,
+.ai-chat-input-area {
+    background: var(--theme-surface) !important;
+}
+
+
+.ai-chat-messages {
+    background: var(--theme-page) !important;
+}
+
+
+.ai-chat-title,
+.ai-chat-welcome h3 {
+    color: var(--theme-text) !important;
+}
+
+
+.ai-chat-kicker,
+.ai-chat-welcome p {
+    color: var(--theme-muted) !important;
+}
+
+
+.ai-chat-bubble {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-text-2) !important;
+}
+
+
+.ai-chat-user .ai-chat-bubble {
+    background: var(--theme-user) !important;
+    border-color: var(--theme-primary) !important;
+    color: var(--theme-user-text) !important;
+}
+
+
+.ai-chat-open-button,
+.ai-chat-send {
+    background: var(--theme-primary) !important;
+    border-color: var(--theme-primary) !important;
+}
+
+
+.ai-chat-open-button:hover,
+.ai-chat-send:hover {
+    background: var(--theme-primary-hover) !important;
+}
+
+
+.ai-chat-input {
+    background: var(--theme-surface-2) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-text) !important;
+}
+
+
+.ai-chat-mic {
+    background: var(--theme-surface) !important;
+    border-color: var(--theme-border) !important;
+    color: var(--theme-muted) !important;
+}
+
+
+/* ============================================================
+   THEME CENTER
+   ============================================================ */
+
+.theme-center {
+    position: relative;
+}
+
+
+.theme-button {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 10px;
+    border: 1px solid var(--theme-border);
+    border-radius: 8px;
+    background: var(--theme-surface);
+    color: var(--theme-text-2);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.theme-button:hover {
+    border-color: var(--theme-primary);
+    background: var(--theme-accent-soft-2);
+    color: var(--theme-primary);
+}
+
+
+.theme-button-icon {
+    color: var(--theme-primary);
+    font-size: 15px;
+}
+
+
+.theme-current-label {
+    color: var(--theme-muted);
+    font-weight: 500;
+}
+
+
+.theme-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 360px;
+    padding: 15px;
+    border: 1px solid var(--theme-border);
+    border-radius: 14px;
+    background: var(--theme-surface);
+    box-shadow: 0 16px 45px rgba(0,0,0,0.16);
+    z-index: 7000;
+}
+
+
+.theme-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 13px;
+}
+
+
+.theme-panel-kicker {
+    color: var(--theme-primary);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+
+.theme-panel-title {
+    margin-top: 3px;
+    color: var(--theme-text);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.theme-close-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    background: var(--theme-surface-2);
+    color: var(--theme-muted);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.theme-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    padding: 7px 9px;
+    gap: 9px;
+    border: 1px solid var(--theme-border);
+    border-radius: 9px;
+    background: var(--theme-surface);
+    color: var(--theme-text-2);
+    cursor: pointer;
+    text-align: left;
+}
+
+
+.theme-option:hover {
+    background: var(--theme-accent-soft-2);
+    border-color: var(--theme-primary);
+}
+
+
+.theme-option.selected {
+    border: 2px solid var(--theme-primary);
+    background: var(--theme-accent-soft);
+}
+
+
+.theme-swatch {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    border-radius: 6px;
+}
+
+
+.theme-option-name {
+    font-size: 10px;
+    font-weight: 650;
+}
+
+
+.theme-check {
+    margin-left: auto;
+    color: var(--theme-primary);
+    display: none;
+}
+
+
+.theme-option.selected .theme-check {
+    display: block;
+}
+
+
+/* ============================================================
+   SWATCHES
+   ============================================================ */
+
+.theme-swatch-classic-blue {
+    background: linear-gradient(135deg, #1A73E8 55%, #E8F0FE 55%);
+}
+
+.theme-swatch-sky-blue {
+    background: linear-gradient(135deg, #2196F3 55%, #E3F2FD 55%);
+}
+
+.theme-swatch-black-neon {
+    background: linear-gradient(135deg, #00A8FF 35%, #05070A 35%);
+}
+
+.theme-swatch-forest-green {
+    background: linear-gradient(135deg, #16824A 55%, #E6F4EA 55%);
+}
+
+.theme-swatch-royal-purple {
+    background: linear-gradient(135deg, #6D3FD9 55%, #EEE8FF 55%);
+}
+
+.theme-swatch-sunset-orange {
+    background: linear-gradient(135deg, #F57C00 55%, #FFF0E0 55%);
+}
+
+.theme-swatch-adobe-red {
+    background: linear-gradient(135deg, #D62F2F 55%, #FCE8E8 55%);
+}
+
+.theme-swatch-dark-slate {
+    background: linear-gradient(135deg, #3B82F6 35%, #171A21 35%);
+}
+
+.theme-swatch-ocean-teal {
+    background: linear-gradient(135deg, #00897B 55%, #E0F2F1 55%);
+}
+
+.theme-swatch-graphite-gold {
+    background: linear-gradient(135deg, #B8891A 45%, #242424 45%);
+}
+
+.theme-swatch-burgundy-rose {
+    background: linear-gradient(135deg, #8E2C4A 55%, #F7E7EC 55%);
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    .browser-bar {
+        padding: 7px 12px !important;
+    }
+
+    .toolbar-brand-name {
+        display: none;
+    }
+
+    .theme-current-label {
+        display: none;
+    }
+
+    .theme-button-text {
+        display: none;
+    }
+
+    .theme-panel {
+        position: fixed;
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
+    }
+
+}
